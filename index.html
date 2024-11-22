@@ -98,7 +98,7 @@
             background-color: #00796b;
         }
 
-        /* Responsive Design */
+        /* Responsive Design Fixes */
         @media (max-width: 768px) {
             .banner {
                 padding: 40px 20px;
@@ -110,16 +110,21 @@
 
             .cta-button {
                 font-size: 18px;
+                padding: 12px 20px;
+            }
+
+            iframe {
+                height: 350px;
+            }
+
+            .price-section {
+                padding: 20px;
             }
         }
 
         @media (max-width: 480px) {
             iframe {
-                height: 350px;
-            }
-
-            h1, h2 {
-                font-size: 22px;
+                height: 300px;
             }
 
             .cta-button {
@@ -156,10 +161,10 @@
             <p>Check out the live price of GeckoCoin and TRST token. Learn how to swap TRST for GeckoCoin and start your crypto journey today!</p>
         </div>
 
-        <!-- Video Embed Section -->
+        <!-- Video Embed Section (Autoplay Fixed) -->
         <div class="video-container">
             <h2>Learn More About GeckoCoin</h2>
-            <iframe src="https://youtu.be/VUFojJycx3s?si=OEeY9QFJ4YMQXtWU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VUFojJycx3s?autoplay=1&rel=0&showinfo=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <!-- Price and Swap Section -->
@@ -206,12 +211,12 @@
                 .catch(error => console.error('Error fetching GeckoCoin price:', error));
 
             if (trstData && geckoData) {
-                document.getElementById('trst-price').innerText = `$${trstData.quotes.USD.price.toFixed(4)}`;
-                document.getElementById('gecko-price').innerText = `$${geckoData.quotes.USD.price.toFixed(4)}`;
+                document.getElementById('trst-price').innerText = `$${trstData.quotes.USD.price}`;
+                document.getElementById('gecko-price').innerText = `$${geckoData.quotes.USD.price}`;
             }
         }
 
-        // Call the function to update prices
+        // Load price data
         fetchPrices();
     </script>
 </body>
