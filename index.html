@@ -3,125 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A tribute to Satoshi Nakamoto, Gecko.mn, and the revolutionary Ghostrider algorithm.">
-    <title>Satoshi Nakamoto | Gecko.mn</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="WeTrust.io - Decentralized financial solutions powered by TRST token. Purchase TRST tokens with secure payment options. Join the future of decentralized finance.">
+    <meta name="keywords" content="WeTrust.io, TRST token, decentralized finance, blockchain, cryptocurrency, token packages, buy tokens">
+    <meta name="author" content="WeTrust.io">
+    <meta name="robots" content="index, follow">
+    <title>WeTrust.io - Decentralized Financial Solutions</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #0d0d0d;
-            color: #e6e6e6;
-            line-height: 1.6;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
         }
         header {
-            background-color: #1c1c1c;
-            color: white;
+            background-color: #0d6efd;
+            padding: 10px 20px;
             text-align: center;
-            padding: 30px 10px;
         }
-        header h1 {
-            margin: 0;
-            font-weight: 600;
-            font-size: 2.5rem;
+        header img {
+            max-height: 50px;
         }
-        header p {
-            margin: 10px 0 0;
-            font-weight: 300;
+        nav {
+            margin: 20px 0;
+            text-align: center;
         }
-        .container {
-            max-width: 1000px;
+        nav a {
+            color: #0d6efd;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        main {
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: #222;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
-        h2 {
-            font-weight: 600;
-            margin-top: 20px;
-            border-bottom: 2px solid #444;
-            padding-bottom: 10px;
-            color: #00b894;
+        .token-packages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
         }
-        .contact a {
-            color: #00cec9;
-            text-decoration: none;
+        .package {
+            border: 1px solid #0d6efd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: calc(33.33% - 20px);
+            background-color: #2c2c2c;
+            text-align: center;
         }
-        .contact a:hover {
-            text-decoration: underline;
+        .package h3 {
+            color: #0d6efd;
         }
-        .project, .benefits, .about {
-            margin: 20px 0;
+        .package button {
+            background-color: #0d6efd;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
         }
         footer {
+            margin-top: 30px;
             text-align: center;
-            padding: 15px;
-            background-color: #1c1c1c;
-            color: white;
+            padding: 20px;
+            background-color: #0d6efd;
+            color: #fff;
         }
-        footer a {
-            color: #00cec9;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .package {
+                width: calc(50% - 20px);
             }
-            .container {
-                padding: 15px;
+        }
+        @media (max-width: 480px) {
+            .package {
+                width: calc(100% - 20px);
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Satoshi Nakamoto</h1>
-        <p>The Visionary Behind Decentralization</p>
+        <img src="logo.png" alt="WeTrust.io Logo">
     </header>
-    <div class="container">
-        <h2>Contact</h2>
-        <div class="contact">
-            <p>Email: <a href="mailto:satoshi@vistomail.com">satoshi@vistomail.com</a></p>
-        </div>
-        <h2>PGP Public Key</h2>
-        <code>
------BEGIN PGP PUBLIC KEY BLOCK-----<br>
-<br>
-xjMEZzJTEBYJKwYBBAHaRw8BAQdAjF+u6uci9Z9BqAgIF3dk4uIlSboTJgxI<br>
-Cpx8ha4p+6rNLXNhdG9zaGlAdmlzdG9tYWlsLmNvbSA8c2F0b3NoaUB2aXN0<br>
-b21haWwuY29tPsKMBBAWCgA+BYJnMlMQBAsJBwgJkIsVRTECr56sAxUICgQW<br>
-AAIBAhkBApsDAh4BFiEEqxUDcY4emYM1YncpixVFMQKvnqwAAI7ZAP499nFP<br>
-QexVI948iPA31EKB60LuMiLwuvJjUr+zqkVUZwEApkeEFYOP+JsmSrUHl7h1<br>
-QK80mzjzMVkp7lDlfaFw2QvOOARnMlMQEgorBgEEAZdVAQUBAQdA8u+s2PE0<br>
-K7VLcunVYC24cTHMNQV+/ev6W9m1Y8N71g0DAQgHwngEGBYKACoFgmcyUxAJ<br>
-kIsVRTECr56sApsMFiEEqxUDcY4emYM1YncpixVFMQKvnqwAAIoVAP0VHWUT<br>
-9zHg/HSIpmK8WsjwtIyQompe1pNkfLxaxAYXGwEAuzpjORe3eaU5toT6M61m<br>
-zi7TO2oYZMNHLKq1ziFHgwc=<br>
-=9n44<br>
------END PGP PUBLIC KEY BLOCK-----
-        </code>
-        <h2>About Gecko.mn</h2>
-        <div class="project">
-            <p><strong>Gecko.mn</strong> is committed to advancing blockchain technology in line with Satoshi Nakamoto's vision. Its focus on decentralization and transparency ensures a more secure digital economy. Learn more at <a href="https://gecko.mn" target="_blank">gecko.mn</a>.</p>
-        </div>
-        <h2>Ghostrider Algorithm</h2>
-        <div class="benefits">
-            <p>The Ghostrider algorithm combines the efficiency of multiple hashing functions to ensure fairness, defeating ASIC dominance. Its adaptive design makes it ideal for CPU mining, embodying Satoshi's "one CPU, one vote" philosophy.</p>
-        </div>
-        <h2>X16R Algorithm</h2>
-        <div class="about">
-            <p>With dynamic algorithms, X16R minimizes ASIC advantage, promoting decentralization. Its versatility ensures long-term sustainability for miners and the ecosystem.</p>
-        </div>
-    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#packages">Token Packages</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="home">
+            <h1>Welcome to WeTrust.io</h1>
+            <p>Empowering decentralized financial solutions through the TRST token.</p>
+        </section>
+        <section id="packages" class="token-packages">
+            <div class="package">
+                <h3>Basic Package</h3>
+                <p>10 TRST Tokens for $10</p>
+                <a href="https://nowpayments.io/payment/?iid=5408974334" target="_blank">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+            <div class="package">
+                <h3>Pro Package</h3>
+                <p>50 TRST Tokens for $50</p>
+                <a href="https://nowpayments.io/payment/?iid=4939653855" target="_blank">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+            <div class="package">
+                <h3>Premium Package</h3>
+                <p>100 TRST Tokens for $100</p>
+                <a href="https://nowpayments.io/payment/?iid=6289902049" target="_blank">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2024 Dedicated to Satoshi Nakamoto | Visit <a href="https://gecko.mn" target="_blank">Gecko.mn</a></p>
+        &copy; 2024 WeTrust.io | Decentralized Financial Solutions
     </footer>
 </body>
 </html>
