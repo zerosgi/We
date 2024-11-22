@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WeTrust.io has merged with Gecko.mn to create a seamless blockchain experience. Trade your TRST token for GeckoCoin for a 1:1 swap and join our community.">
-    <meta name="keywords" content="WeTrust.io, Gecko.mn, GeckoCoin, TRST Token, blockchain, cryptocurrency, 1:1 swap, cryptocurrency exchange, TRST to GeckoCoin swap, blockchain merge">
+    <meta name="description" content="GeckoCoin live price and TRST to GeckoCoin swap. Real-time price data fetched from CoinPaprika API. Buy GeckoCoin or swap your TRST tokens for GeckoCoin.">
+    <meta name="keywords" content="GeckoCoin, TRST token, CoinPaprika, cryptocurrency price, live prices, WeTrust, swap TRST to GeckoCoin, buy GeckoCoin, crypto exchange">
     <meta name="author" content="Alex Elbanna">
-    <meta property="og:title" content="WeTrust.io is Now Gecko.mn | 1:1 Swap for TRST to GeckoCoin">
-    <meta property="og:description" content="WeTrust.io has merged with Gecko.mn to offer an easy TRST token to GeckoCoin swap. Get started today and join the blockchain revolution!">
-    <meta property="og:image" content="https://gecko.mn/assets/og-image.png">
+    <meta property="og:title" content="Gecko.mn - Live Price of GeckoCoin & TRST">
+    <meta property="og:description" content="Check out the live price of GeckoCoin and TRST token. Swap TRST to GeckoCoin and purchase it directly here.">
+    <meta property="og:image" content="path_to_image/logo.png">
     <meta property="og:url" content="https://gecko.mn">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WeTrust.io is Now Gecko.mn | 1:1 Swap for TRST to GeckoCoin">
-    <meta name="twitter:description" content="WeTrust.io has merged with Gecko.mn for a seamless blockchain experience. Swap your TRST token for GeckoCoin today!">
-    <meta name="twitter:image" content="https://gecko.mn/assets/twitter-image.png">
+    <meta name="twitter:title" content="Gecko.mn - Live Price of GeckoCoin & TRST">
+    <meta name="twitter:description" content="Swap TRST for GeckoCoin and check live prices. Real-time updates from CoinPaprika API.">
+    <meta name="twitter:image" content="path_to_image/logo.png">
     <meta name="robots" content="index, follow">
-    <title>Gecko.mn - 1:1 Swap for TRST Token to GeckoCoin</title>
-    <link rel="canonical" href="https://gecko.mn">
+    <meta name="googlebot" content="index, follow">
+    <title>Gecko.mn - Live Price of GeckoCoin & TRST</title>
+    <link rel="icon" href="pac.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <style>
+        /* Basic Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -30,17 +34,26 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            overflow: hidden;
         }
+
         h1 {
             font-size: 36px;
             color: #00bcd4;
-            margin-bottom: 15px;
         }
+
         p {
             font-size: 20px;
             margin-bottom: 20px;
         }
+
+        .price-section {
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         .cta-button {
             background-color: #00bcd4;
             padding: 15px 30px;
@@ -51,9 +64,11 @@
             margin-top: 20px;
             transition: background-color 0.3s ease;
         }
+
         .cta-button:hover {
             background-color: #00796b;
         }
+
         footer {
             position: absolute;
             bottom: 20px;
@@ -61,32 +76,16 @@
             text-align: center;
             font-size: 14px;
         }
+
         .signature {
             font-size: 12px;
             margin-top: 20px;
             color: #00bcd4;
             word-wrap: break-word;
         }
+
         .signature a {
             color: #00bcd4;
-        }
-        .swap-section {
-            background-color: #1c1c1c;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .swap-section h2 {
-            font-size: 28px;
-            color: #00bcd4;
-            margin-bottom: 15px;
-        }
-        .swap-section p {
-            font-size: 18px;
         }
 
         /* Responsive Design */
@@ -94,21 +93,14 @@
             h1 {
                 font-size: 30px;
             }
+
             p {
                 font-size: 18px;
             }
+
             .cta-button {
                 font-size: 18px;
                 padding: 12px 25px;
-            }
-            .swap-section {
-                padding: 15px;
-                margin-top: 15px;
-            }
-            .signature {
-                font-size: 10px;
-                padding: 10px;
-                word-wrap: break-word;
             }
         }
 
@@ -116,38 +108,97 @@
             h1 {
                 font-size: 28px;
             }
+
             p {
                 font-size: 16px;
             }
+
             .cta-button {
                 font-size: 16px;
                 padding: 10px 20px;
             }
         }
+
+        .price-comparison {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .price-comparison p {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        .price-comparison .current-price {
+            font-size: 28px;
+            color: #00bcd4;
+        }
+
+        .swap-box {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
     </style>
 </head>
+
 <body>
-    <div>
-        <h1>WeTrust.io is now Gecko.mn</h1>
-        <p>Welcome to the new home of Gecko.mn, where you can easily swap your TRST token for GeckoCoin at a 1:1 ratio!</p>
-        <a href="https://gecko.mn" class="cta-button" target="_blank">Visit Gecko.mn</a>
-    </div>
-    
-    <div class="swap-section">
-        <h2>1:1 Swap for TRST Token to GeckoCoin</h2>
-        <p>To swap your TRST tokens for GeckoCoin, send your TRST to the following address:</p>
-        <p><strong>TRST Token Address: <a href="https://etherscan.io/address/0x6F63D141C2fFA4ba37716d5A191391b0b4a00ace" target="_blank">0x6F63D141C2fFA4ba37716d5A191391b0b4a00ace</a></strong></p>
-        <p>Once you have sent the TRST, contact us via email to complete the swap. Be sure to include the transaction ID and your GeckoCoin wallet address in the email for confirmation.</p>
-        <a href="mailto:satoshi@vistomail.com?subject=1:1%20Swap&body=I%20have%20X%20amount%20of%20TRST%20tokens.%20I%20confirm%20that%20I%20have%20sent%20TRST%20to%20the%20address%20%3A%200x6F63D141C2fFA4ba37716d5A191391b0b4a00ace.%20My%20GeckoCoin%20wallet%20address%20is%20[Your%20GeckoCoin%20Wallet%20Address].%20The%20transaction%20ID%20is%20[Transaction%20ID]." class="cta-button">Contact for Swap</a>
+    <div class="container">
+        <h1>GeckoCoin - Live Price & TRST to GeckoCoin Swap</h1>
+        <p>Check out the live price of GeckoCoin (GEC) and WeTrust (TRST). You can directly buy GeckoCoin or swap your TRST for GeckoCoin using the form below.</p>
+
+        <div class="price-section">
+            <div class="price-comparison">
+                <p>Current TRST Price:</p>
+                <p class="current-price" id="trst-price">Loading...</p>
+                <p>Current GeckoCoin (GEC) Price:</p>
+                <p class="current-price" id="gecko-price">Loading...</p>
+            </div>
+        </div>
+
+        <div class="swap-box">
+            <h2>Swap TRST to GeckoCoin</h2>
+            <p>To swap your TRST for GeckoCoin, please send TRST to the following address:</p>
+            <p><strong>Address:</strong> 0x6F63D141C2fFA4ba37716d5A191391b0b4a00ace</p>
+            <p><strong>Include your Transaction ID and Wallet Address</strong> in the email body for confirmation.</p>
+            <a href="mailto:satoshi@vistomail.com?subject=TRST to GeckoCoin Swap&body=I have X amount of TRST tokens. I confirm that I have sent TRST to this address: 0x6F63D141C2fFA4ba37716d5A191391b0b4a00ace. My GeckoCoin wallet address is [Your GeckoCoin Wallet Address]. Transaction ID: [Insert Transaction ID Here]." class="cta-button">
+                Send TRST and Swap
+            </a>
+        </div>
+
+        <div class="price-section">
+            <a href="https://nowpayments.io/donation/geckocoin" class="cta-button">Buy GeckoCoin Directly</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Gecko.mn. All rights reserved.</p>
+            <div class="signature">
+                <p>Web design by <a href="https://elbanna.org">Elbanna.org</a></p>
+            </div>
+        </footer>
     </div>
 
-    <div class="signature">
-        <p> by Satoshi Nakamoto</p>
-        <p>PGP Key Fingerprint: <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/AB1503718E1E9983356277298B15453102AF9EAC" target="_blank">AB1503718E1E9983356277298B15453102AF9EAC</a></p>
-    </div>
+    <script>
+        // Fetch price data from CoinPaprika API
+        async function fetchPrices() {
+            const trstData = await fetch('https://api.coinpaprika.com/v1/coins/trst-wetrust')
+                .then(response => response.json())
+                .catch(error => console.error('Error fetching TRST price:', error));
 
-    <footer>
-        <p>© 2024 Gecko.mn</p>
-    </footer>
+            const geckoData = await fetch('https://api.coinpaprika.com/v1/coins/your-gecko-coin-id') // Replace with actual GeckoCoin ID
+                .then(response => response.json())
+                .catch(error => console.error('Error fetching GeckoCoin price:', error));
+
+            if (trstData && geckoData) {
+                document.getElementById('trst-price').innerText = `$${trstData.quotes.USD.price.toFixed(4)}`;
+                document.getElementById('gecko-price').innerText = `$${geckoData.quotes.USD.price.toFixed(4)}`;
+            }
+        }
+
+        // Call the function to update prices
+        fetchPrices();
+    </script>
 </body>
+
 </html>
