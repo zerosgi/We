@@ -20,13 +20,16 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
+            overflow: hidden;
         }
         h1 {
             font-size: 36px;
             color: #00bcd4;
+            margin-bottom: 15px;
         }
         p {
             font-size: 20px;
+            margin-bottom: 20px;
         }
         .cta-button {
             background-color: #00bcd4;
@@ -36,6 +39,7 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
         .cta-button:hover {
             background-color: #00796b;
@@ -48,12 +52,45 @@
             font-size: 14px;
         }
         .signature {
-            font-size: 14px;
+            font-size: 12px;
             margin-top: 20px;
             color: #00bcd4;
+            word-wrap: break-word;
         }
         .signature a {
             color: #00bcd4;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .cta-button {
+                font-size: 18px;
+                padding: 12px 25px;
+            }
+            .signature {
+                font-size: 10px;
+                padding: 10px;
+                word-wrap: break-word;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
