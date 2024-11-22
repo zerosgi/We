@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WeTrust.io is now Gecko.mn. Join us for the relaunch and presale of our new platform!">
-    <meta name="keywords" content="WeTrust, Gecko.mn, Blockchain, Crypto, TRST, GeckoCoin, Presale">
+    <meta name="description" content="Buy TRST tokens, calculate your USD conversion easily with our TRST-to-USD calculator.">
+    <meta name="keywords" content="TRST Token, Cryptocurrency, Token Purchase, TRST Calculator">
     <meta name="author" content="Alex Elbanna">
-    <title>WeTrust.io Relaunch</title>
+    <title>Buy TRST Token</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
         }
         header {
             background: #121212;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px;
         }
         header .logo {
             font-size: 32px;
@@ -29,82 +28,129 @@
         }
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
         }
-        .featured-video {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
+        .price-section {
+            text-align: center;
+            margin-bottom: 40px;
         }
-        .featured-video iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            margin-bottom: 10px;
+        .price-section h2 {
+            font-size: 24px;
+            margin: 0;
         }
-        .video-list {
+        .price {
+            font-size: 32px;
+            color: #00bcd4;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .calculator {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
+            margin-top: 20px;
         }
-        .video-list iframe {
+        .calculator input {
+            padding: 10px;
+            font-size: 16px;
             width: 200px;
-            height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #00bcd4;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #0097a7;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
         }
         .social-icons {
             text-align: center;
-            margin: 20px 0;
+            margin-top: 40px;
         }
         .social-icons a {
-            color: #121212;
-            font-size: 20px;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #00bcd4;
+            font-size: 30px;
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
         }
         footer {
             background: #121212;
             color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 30px;
+        }
+        .social-icons a:hover {
+            color: #00bcd4;
+        }
+        .video-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .video-section iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">WeTrust.io</div>
+        <div class="logo">WeTrust Platform</div>
     </header>
-
     <div class="container">
-        <div class="featured-video">
-            <h2>Featured Video</h2>
-            <iframe src="https://www.youtube.com/embed/VUFojJycx3s?autoplay=1&mute=1&rel=0" frameborder="0" allowfullscreen></iframe>
-            <p>Check out our latest updates on the WeTrust.io platform.</p>
+        <div class="price-section">
+            <h2>Current Price of TRST Token</h2>
+            <div class="price">$0.00003499</div>
         </div>
 
-        <div class="video-list">
-            <iframe src="https://www.youtube.com/embed/tZJX24bGIdA?rel=0" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/R7JQByC3P0c?rel=0" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/O3KKg1bp7sM?rel=0" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/Zm3C5_OrZOo?rel=0" frameborder="0" allowfullscreen></iframe>
+        <div class="calculator">
+            <input type="number" id="usdAmount" placeholder="Enter USD Amount" oninput="calculateTRST()">
+            <button onclick="calculateTRST()">Calculate</button>
+        </div>
+        <div class="result" id="result"></div>
+
+        <div class="video-section">
+            <h2>Featured Video</h2>
+            <iframe src="https://www.youtube.com/embed/VUFojJycx3s?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <div class="social-icons">
-            <h3>Follow Us</h3>
-            <a href="https://youtube.com/@wetrustplatform" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://twitter.com/wetrustplatform" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://reddit.com/r/wetrustplatform" target="_blank"><i class="fab fa-reddit"></i></a>
+            <a href="https://youtube.com/@wetrustplatform?si=LyWo0PWExbywj9Cp" target="_blank" class="fa fa-youtube"></a>
+            <a href="https://twitter.com/WeTrustPlatform" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.reddit.com/r/WeTrustPlatform" target="_blank" class="fa fa-reddit"></a>
+            <a href="https://www.linkedin.com/company/wetrustplatform" target="_blank" class="fa fa-linkedin"></a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 WeTrust.io. All rights reserved.</p>
+        <p>&copy; 2024 WeTrust Platform. All rights reserved.</p>
     </footer>
+
+    <script>
+        const pricePerTRST = 0.00003499;
+
+        function calculateTRST() {
+            const usdAmount = parseFloat(document.getElementById('usdAmount').value);
+            if (isNaN(usdAmount) || usdAmount <= 0) {
+                document.getElementById('result').innerHTML = "Please enter a valid amount.";
+                return;
+            }
+            const trstAmount = usdAmount / pricePerTRST;
+            document.getElementById('result').innerHTML = `${usdAmount} USD = ${trstAmount.toFixed(4)} TRST`;
+        }
+    </script>
 </body>
 </html>
