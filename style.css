@@ -51,6 +51,11 @@ section#packages {
     background-color: #555;
 }
 
+/* Video Section */
+#video iframe {
+    margin-top: 20px;
+}
+
 /* Token Packages Styling */
 .package {
     background-color: #333;
@@ -60,6 +65,7 @@ section#packages {
     display: inline-block;
     width: 30%;
     text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .package h3 {
@@ -80,6 +86,23 @@ section#packages {
 }
 
 .package a:hover {
+    background-color: #008000;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+    margin-top: 20px;
+}
+
+.subscribe-btn .btn {
+    background-color: #00ff00;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.subscribe-btn .btn:hover {
     background-color: #008000;
 }
 
