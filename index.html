@@ -1,15 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WeTrust.io - Your platform for secure token purchases.">
+    <meta name="description" content="WeTrust.io - Token Platform for TRST Token">
     <meta name="author" content="WeTrust Platform">
-    <meta name="keywords" content="WeTrust, TRST token, token purchase, secure platform">
+    <meta name="keywords" content="WeTrust, TRST token, token platform, secure token purchase">
     <title>WeTrust.io - Token Platform</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header .logo img {
+            width: 150px;
+            margin-left: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .package {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .package:hover {
+            transform: scale(1.05);
+        }
+
+        .package h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .package p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-btn a {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn a:hover {
+            background-color: #555;
+        }
+
+        iframe {
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .package {
+                padding: 15px;
+            }
+
+            .package h3 {
+                font-size: 1.5rem;
+            }
+
+            .cta-btn a {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -26,7 +165,7 @@
 
     <section id="about" class="section">
         <h2>About WeTrust</h2>
-        <p>WeTrust is a decentralized platform that allows secure, transparent, and fast token transactions. Join us today to participate in the future of secure token economies.</p>
+        <p>WeTrust is a decentralized platform that enables users to securely buy tokens. Join us to be part of the token economy.</p>
     </section>
 
     <section id="packages" class="section">
@@ -55,9 +194,9 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 WeTrust Platform. All Rights Reserved.</p>
+        <p>&copy; 2024 WeTrust Platform. All Rights Reserved. <br><a href="https://coinpaprika.com/coin/trst-wetrust" target="_blank">TRST on CoinPaprika</a></p>
     </footer>
 
-    <script src="scripts.js"></script>
 </body>
+
 </html>
