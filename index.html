@@ -20,11 +20,19 @@
             text-align: center;
         }
         h1 {
-            font-size: clamp(3rem, 8vw, 5rem); /* Dynamically adjusts font size based on screen width */
+            font-size: clamp(3rem, 8vw, 5rem); /* Dynamically adjusts font size */
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
             animation: glow 2s infinite;
-            margin: 0;
+            margin: 20px 0;
             padding: 0;
+        }
+        img {
+            width: 150px; /* Adjust image size */
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
         }
         button {
             margin-top: 20px;
@@ -70,6 +78,7 @@
     </style>
 </head>
 <body>
+    <img src="alexander-elbanna-gallery.jpg" alt="Alexander Elbanna Profile Picture">
     <h1>Elbanna.org</h1>
     <button onclick="window.location.href='https://elbanna.org';">Visit Elbanna.org</button>
 </body>
