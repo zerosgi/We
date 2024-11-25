@@ -10,17 +10,31 @@
             padding: 0;
             background-color: black;
             color: white;
-            font-family: serif;
+            font-family: 'Garamond', serif; /* Refined serif style */
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 3px solid white;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+        p.tagline {
+            font-size: 1rem;
+            margin: 5px 0 20px;
+            color: #d3d3d3; /* Light gray for subtle contrast */
         }
         button {
-            margin-top: 20px;
             padding: 10px 20px;
             font-size: 1rem;
             font-weight: bold;
@@ -28,21 +42,24 @@
             background-color: white;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
         }
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.5rem;
+        button:hover {
+            background-color: #e0e0e0;
+        }
+        .contact {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <img src="alexander-elbanna-gallery.jpg" alt="Alexander Elbanna">
     <h1>Elbanna.org</h1>
+    <p class="tagline">Wetrust.io is Now Elbanna.org</p>
     <button onclick="window.location.href='https://elbanna.org';">Visit Elbanna.org</button>
-    <div class="social-links">
-        <a href="https://t.me/Alexelbanna" target="_blank">Telegram</a>
+    <div class="contact">
+        <button onclick="window.location.href='https://t.me/Alexelbanna';">Contact Alex</button>
     </div>
 </body>
 </html>
