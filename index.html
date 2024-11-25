@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elbanna.org</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             margin: 0;
@@ -12,78 +11,38 @@
             background-color: black;
             color: white;
             font-family: serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
             text-align: center;
         }
-        h1 {
-            font-size: clamp(3rem, 8vw, 5rem); /* Dynamically adjusts font size */
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
-            animation: glow 2s infinite;
-            margin: 20px 0;
-            padding: 0;
-        }
         img {
-            width: 150px; /* Adjust image size */
+            width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 3px solid white;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-            margin-bottom: 20px;
         }
         button {
             margin-top: 20px;
-            padding: 15px 30px;
-            font-size: clamp(1rem, 4vw, 1.5rem); /* Dynamically adjusts button text size */
+            padding: 10px 20px;
+            font-size: 1rem;
             font-weight: bold;
             color: black;
             background-color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-        }
-        .social-links {
-            margin-top: 30px;
-            font-size: 2rem;
         }
         .social-links a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #00acee; /* Telegram blue */
-        }
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-            }
-            50% {
-                text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 255, 255, 0.8);
-            }
-            100% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-            }
+            margin: 0 10px;
+            font-size: 1.5rem;
         }
     </style>
 </head>
 <body>
-    <img src="alexander-elbanna-gallery.jpg" alt="Alexander Elbanna Profile Picture">
+    <img src="alexander-elbanna-gallery.jpg" alt="Alexander Elbanna">
     <h1>Elbanna.org</h1>
     <button onclick="window.location.href='https://elbanna.org';">Visit Elbanna.org</button>
     <div class="social-links">
-        <a href="https://t.me/Alexelbanna" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://t.me/Alexelbanna" target="_blank">Telegram</a>
     </div>
 </body>
 </html>
