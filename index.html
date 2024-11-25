@@ -20,14 +20,16 @@
             text-align: center;
         }
         h1 {
-            font-size: 5rem;
+            font-size: clamp(3rem, 8vw, 5rem); /* Dynamically adjusts font size based on screen width */
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
             animation: glow 2s infinite;
+            margin: 0;
+            padding: 0;
         }
         button {
             margin-top: 20px;
             padding: 15px 30px;
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 4vw, 1.5rem); /* Dynamically adjusts button text size */
             font-weight: bold;
             color: black;
             background-color: white;
@@ -50,6 +52,19 @@
             }
             100% {
                 text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+            }
+        }
+        @media (max-height: 500px) {
+            body {
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 20px;
+            }
+            h1 {
+                margin-bottom: 10px;
+            }
+            button {
+                margin-top: 10px;
             }
         }
     </style>
