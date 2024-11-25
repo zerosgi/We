@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elbanna.org</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             margin: 0;
@@ -51,6 +52,19 @@
             transform: scale(1.1);
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
+        .social-links {
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #00acee; /* Telegram blue */
+        }
         @keyframes glow {
             0% {
                 text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
@@ -81,5 +95,8 @@
     <img src="alexander-elbanna-gallery.jpg" alt="Alexander Elbanna Profile Picture">
     <h1>Elbanna.org</h1>
     <button onclick="window.location.href='https://elbanna.org';">Visit Elbanna.org</button>
+    <div class="social-links">
+        <a href="https://t.me/geckomn" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    </div>
 </body>
 </html>
