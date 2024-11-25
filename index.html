@@ -12,15 +12,34 @@
             color: white;
             font-family: serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            text-align: center;
         }
         h1 {
             font-size: 5rem;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
             animation: glow 2s infinite;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
         }
         @keyframes glow {
             0% {
@@ -37,5 +56,6 @@
 </head>
 <body>
     <h1>Elbanna.org</h1>
+    <button onclick="window.location.href='https://example.com';">Click Here</button>
 </body>
 </html>
